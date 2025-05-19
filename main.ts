@@ -1,4 +1,5 @@
 function drawTurtle(cmds: number[][]) {
+    vanGogh.penUp()
     bluetooth.uartWriteString("%dsta")
     console.log("drawing" + cmds)
     for (let i = 0; i < cmds.length; i++) {
@@ -24,8 +25,8 @@ function drawTurtle(cmds: number[][]) {
     bluetooth.uartWriteString("%dend")
 }
 let cmds: number[][] = [[3]]
-vanGogh.penDown()
 vanGogh.penUp()
+vanGogh.penDown()
 bluetooth.startUartService();
 console.log("started");
 
